@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true">
+  
+  <ion-card>
+    
+    <ion-card-content>
+
+      <ion-row justify-content-center>
+
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-button (click)="toggleEstado('LED1')" [ngStyle]="{'--background': estados['LED1'] ? '8a2be2' : 'lightblue'}">
+            <ion-icon name="eye-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-button (click)="toggleEstado('LED2')" [ngStyle]="{'--background': estados['LED2'] ? '8a2be2' : 'lightblue'}">
+            <ion-icon name="eye-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-button (click)="toggleEstado('LED3')" [ngStyle]="{'--background': estados['LED3'] ? '8a2be2' : 'lightblue'}">
+            <ion-icon name="eye-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-button id="General" (click)="toggleTodos()"> {{ todosEncendidos() ? 'Encender' : 'Apagar' }}</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
